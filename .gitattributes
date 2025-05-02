@@ -1,9 +1,3 @@
-#Ignore the html files
-Docs.html linguist-detectable=false
-
-#Ignore the React Public/index.html for language stats.
-billing-software/public/index.html linguist-detectable=false
-
-#Ensure Java files are correctly classified.
-*.java linguist-language=true
-
+# Add to existing .gitattributes
+primary-language.java linguist-language=Java
+primary-language.java linguist-primary=true
