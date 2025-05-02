@@ -1,0 +1,11 @@
+com.sudo
+com.sudo.config
+com.sudo.controller
+com.sudo.entity
+com.sudo.filters
+com.sudo.io
+com.sudo.mappers
+com.sudo.repository
+com.sudo.service
+com.sudo.service.impl
+com.sudo.utils

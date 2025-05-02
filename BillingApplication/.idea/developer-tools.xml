@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DeveloperToolsToolWindowSettingsV1" lastSelectedContentNodeId="ascii-encoder-decoder" pluginVersion="7.0.0">
+    <developerToolsConfigurations>
+      <developerToolConfiguration developerToolId="ascii-encoder-decoder" id="609e3d67-8a46-4e0a-afa4-c2b514d200ef" name="Workbench">
+        <properties>
+          <property key="sourceText" type="INPUT" value="kotlin.String|sudo" />
+          <property key="targetText" type="INPUT" value="kotlin.String|sudo" />
+        </properties>
+      </developerToolConfiguration>
+    </developerToolsConfigurations>
+    <expandedGroupNodeIds />
+  </component>
+</project>
