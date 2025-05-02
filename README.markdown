@@ -5,7 +5,7 @@ BillingApp is a robust and user-friendly application designed to simplify billin
 
 ## ✨ Features
 
-- **Invoice Generation** 📄: Create professional invoices with customizable templates.
+- **Bill Generation** 📄: Genrate Bill for purschased products with all Details.
 - **Customer Management** 👥: Easily store and manage customer information.
 - **Product Inventory** 📦: Track products with pricing and stock details.
 - **Bill Tracking** ✅: Monitor paid and unpaid invoices with status updates.
@@ -14,7 +14,7 @@ BillingApp is a robust and user-friendly application designed to simplify billin
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React ⚛️, Tailwind CSS 🎨
+- **Frontend**: React ⚛️, BootStrap 🎨
 - **Backend**: Spring Boot 🌱, Java ☕, Lombok 🛠️
 - **Database**: MySQL 🗄️
 - **Other Tools**: Maven 📦, Git 🗃️, Postman 📬
@@ -23,9 +23,10 @@ BillingApp is a robust and user-friendly application designed to simplify billin
 
 The application is built around the following core entities:
 
-- **Customer** 👤
+- **User** 👤
   - `id`: Unique identifier (Long)
   - `name`: Customer's full name (String)
+  - `role`: Role of User
   - `email`: Customer's email address (String)
   - `phone`: Contact number (String)
   - `address`: Billing address (String)
@@ -37,12 +38,13 @@ The application is built around the following core entities:
   - `stock`: Available quantity (Integer)
   - `description`: Product details (String)
 
-- **Invoice** 📝
+- **Bill** 📝
   - `id`: Unique identifier (Long)
-  - `customerId`: Reference to Customer (Long)
+  - `customerName`: Customer Name And Email
   - `products`: List of Product IDs and quantities (List)
   - `total`: Total amount (Double)
   - `status`: Paid, Unpaid, or Pending (Enum)
+  - `payment_mode`:Cash or UPI
   - `createdAt`: Invoice creation date (LocalDateTime)
 
 ## 🌐 API Endpoints
@@ -84,15 +86,15 @@ Follow these steps to set up the project locally:
    ```
 
 3. **Set Up the Backend**:
-   - Navigate to the backend directory (e.g., `backend`):
+   - Navigate to the backend directory BillingSoftware
      ```bash
-     cd backend
+     cd BillingSoftware
      ```
    - Configure MySQL:
-     - Create a database named `billingapp`.
+     - Create your own database `yourdbname`.
      - Update `src/main/resources/application.properties` with your MySQL credentials:
        ```properties
-       spring.datasource.url=jdbc:mysql://localhost:3306/billingapp
+       spring.datasource.url=jdbc:mysql://localhost:3306/yourdbname
        spring.datasource.username=your_username
        spring.datasource.password=your_password
        spring.jpa.hibernate.ddl-auto=update
@@ -104,34 +106,37 @@ Follow these steps to set up the project locally:
      ```
 
 4. **Set Up the Frontend**:
-   - Navigate to the frontend directory (e.g., `frontend`):
+   - Navigate to the frontend directory
      ```bash
-     cd frontend
+     cd BillingSoftware
      ```
    - Install dependencies and start the React app:
      ```bash
      npm install
-     npm start
+     npm run dev
      ```
 
 5. **Access the Application**:
    - Backend API: `http://localhost:8080/api/v1`
-   - Frontend: `http://localhost:3000`
+   - Frontend: `http://localhost:5173`
 
 ## 🎮 Usage
 
-1. **Create an Invoice** 📝:
-   - Navigate to the "Invoices" section in the React frontend.
-   - Click "New Invoice," select a customer, and add products.
-   - Save or export the invoice as a PDF.
+1. **Create an Order** 📝:
+   - Navigate to the "Explore" section in the React frontend.
+   - Click "Select Items," enter customer details, and add products.
+   - Save or export the invoice as a PDF or pring.
 
 2. **Manage Customers** 👥:
-   - Add or edit customers in the "Customers" section.
-   - View customer details for quick reference.
+   - Add or edit customers in the "ManageUser" section.
+   - View customer details(name,email)
+   - Can add delete Users.
 
-3. **Track Inventory** 📦:
-   - Manage products in the "Products" section.
-   - Update stock levels and pricing as needed.
+3. **Add Category and Items** 📦:
+   - To add new category navigate to   "ManageCategories" section.
+   - Add name,image,description,bgcolor.
+   - To add Items navigate to "ManageItems" Section.
+   - You select a category available and add a item to once you add it will be reflected on categories
 
 ## 🏗️ Project Structure
 
@@ -142,6 +147,8 @@ Follow these steps to set up the project locally:
   - `repository`: Spring Data JPA repositories
   - `service`: Business logic and service layers
   - `controller`: REST API controllers
+  - `Utils`: Utils for JWT
+  - `filter`: filter for CORS and custom JWT filter
   - Uses Lombok to reduce boilerplate code
 
 - **Frontend** (React):
