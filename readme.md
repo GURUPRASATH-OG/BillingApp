@@ -147,53 +147,7 @@ Follow these steps to set up the project locally:
    - Backend API: `http://localhost:8080/api/v1.0`
    - Frontend: `http://localhost:3000`
 
-## 🌍 Deployment
 
-### Frontend (GitHub Pages)
-The React frontend can be hosted on GitHub Pages as a static site:
-1. Build the React app:
-   ```bash
-   cd frontend
-   npm run build
-   ```
-2. Deploy to GitHub Pages:
-   - Install `gh-pages`:
-     ```bash
-     npm install gh-pages --save-dev
-     ```
-   - Add to `package.json`:
-     ```json
-     "scripts": {
-       "deploy": "gh-pages -d build"
-     },
-     "homepage": "https://GURUPRASATH-OG.github.io/BillingApp"
-     ```
-   - Deploy:
-     ```bash
-     npm run build
-     npm run deploy
-     ```
-3. Enable GitHub Pages in the repository settings (use the `gh-pages` branch).
-4. Access the frontend at `https://GURUPRASATH-OG.github.io/BillingApp`.
-5. Update API calls in the frontend to point to the deployed backend URL.
-
-### Backend (External Hosting)
-The Spring Boot backend requires a server and cannot be hosted on GitHub Pages. Consider platforms like:
-- **Render**: Free tier for Spring Boot with MySQL.
-- **Heroku**: Easy deployment with MySQL add-ons.
-- **Railway**: Supports both frontend and backend.
-Configure CORS in the backend to allow requests from the GitHub Pages domain:
-```java
-@Configuration
-public class WebConfig implements WebMvcConfigurer {
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/api/v1.0/**")
-                .allowedOrigins("https://GURUPRASATH-OG.github.io")
-                .allowedMethods("GET", "POST", "PUT", "DELETE");
-    }
-}
-```
 
 ## 🏗️ Project Structure
 
