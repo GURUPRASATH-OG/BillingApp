@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.sudo"},{"l":"com.sudo.config"},{"l":"com.sudo.controller"},{"l":"com.sudo.entity"},{"l":"com.sudo.filters"},{"l":"com.sudo.io"},{"l":"com.sudo.mappers"},{"l":"com.sudo.repository"},{"l":"com.sudo.service"},{"l":"com.sudo.service.impl"},{"l":"com.sudo.utils"}];updateSearchResults();
