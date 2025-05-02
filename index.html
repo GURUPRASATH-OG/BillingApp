@@ -99,7 +99,7 @@
         <section id="tech-stack" class="mb-12">
             <h2 class="text-3xl font-bold mb-4">Tech Stack</h2>
             <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <li><i class="fas fa-code text-blue-600"></i> <strong>Frontend:</strong> React, Tailwind CSS</li>
+                <li><i class="fas fa-code text-blue-600"></i> <strong>Frontend:</strong> React, BootStrap CSS</li>
                 <li><i class="fas fa-server text-blue-600"></i> <strong>Backend:</strong> Spring Boot, Java, Lombok</li>
                 <li><i class="fas fa-database text-blue-600"></i> <strong>Database:</strong> MySQL</li>
                 <li><i class="fas fa-credit-card text-blue-600"></i> <strong>Payment Gateway:</strong> Razorpay</li>
@@ -327,42 +327,7 @@ npm start</code></pre>
         </section>
 
         <!-- Deployment -->
-        <section id="deployment" class="mb-12">
-            <h2 class="text-3xl font-bold mb-4">Deployment</h2>
-            <h3 class="text-xl font-semibold mb-2">Frontend (GitHub Pages)</h3>
-            <p>The React frontend can be hosted as a static site:</p>
-            <ol class="list-decimal pl-6 space-y-2">
-                <li>Build the React app:
-                    <pre class="bg-gray-800 text-white p-4 rounded"><code>cd frontend
-npm run build</code></pre>
-                </li>
-                <li>Deploy to GitHub Pages:
-                    <ul class="list-disc pl-6">
-                        <li>Install <code>gh-pages</code>: <code>npm install gh-pages --save-dev</code></li>
-                        <li>Add to <code>package.json</code>:
-                            <pre class="bg-gray-800 text-white p-4 rounded"><code>"scripts": {
-  "deploy": "gh-pages -d build"
-},
-"homepage": "https://GURUPRASATH-OG.github.io/BillingApp"</code></pre>
-                        </li>
-                        <li>Deploy: <code>npm run build && npm run deploy</code></li>
-                    </ul>
-                </li>
-                <li>Enable GitHub Pages in repository settings (<code>gh-pages</code> branch).</li>
-                <li>Access at <code>https://GURUPRASATH-OG.github.io/BillingApp</code>.</li>
-            </ol>
-            <h3 class="text-xl font-semibold mb-2 mt-4">Backend (External Hosting)</h3>
-            <p>The Spring Boot backend requires a server (e.g., Render, Heroku, Railway). Configure CORS:</p>
-            <pre class="bg-gray-800 text-white p-4 rounded"><code>@Configuration
-public class WebConfig implements WebMvcConfigurer {
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/api/v1.0/**")
-                .allowedOrigins("https://GURUPRASATH-OG.github.io")
-                .allowedMethods("GET", "POST", "PUT", "DELETE");
-    }
-}</code></pre>
-        </section>
+  
     </div>
 
     <!-- Footer -->
