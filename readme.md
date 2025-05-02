@@ -14,7 +14,7 @@ BillingApp is a web application for managing billing and orders, tailored for sm
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React ⚛️, Tailwind CSS 🎨
+- **Frontend**: React ⚛️, BootStrap CSS 🎨
 - **Backend**: Spring Boot 🌱, Java ☕, Lombok 🛠️
 - **Database**: MySQL 🗄️
 - **Payment Gateway**: Razorpay 💳
@@ -113,7 +113,7 @@ Follow these steps to set up the project locally:
 3. **Set Up the Backend**:
    - Navigate to the backend directory (e.g., `backend`):
      ```bash
-     cd backend
+     cd BillinApplication
      ```
    - Configure MySQL and Razorpay:
      - Create a database named `billingapp`.
@@ -135,7 +135,7 @@ Follow these steps to set up the project locally:
 4. **Set Up the Frontend**:
    - Navigate to the frontend directory (e.g., `frontend`):
      ```bash
-     cd frontend
+     cd BillingSoftware
      ```
    - Install dependencies and start the React app:
      ```bash
@@ -145,7 +145,7 @@ Follow these steps to set up the project locally:
 
 5. **Access the Application**:
    - Backend API: `http://localhost:8080/api/v1.0`
-   - Frontend: `http://localhost:3000`
+   - Frontend: `http://localhost:5173`
 
 
 
@@ -158,10 +158,13 @@ Follow these steps to set up the project locally:
   - `repository`: Spring Data JPA repositories
   - `service`: Business logic and service layers
   - `controller`: REST API controllers
+  - `util`: for Jwt
+  - `filter`: for custom Jwt Filter.
+  - `config`: for spring security,static resource.
   - Uses Lombok to reduce boilerplate code
 
 - **Frontend** (React):
-  - Component-based structure with Tailwind CSS for styling
+  - Component-based structure with BootStrap CSS for styling
   - API integration with backend via Axios or Fetch
 
 ## 🤝 Contributing
